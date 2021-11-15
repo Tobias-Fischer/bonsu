@@ -59,8 +59,6 @@ def ExtInclude(pars):
 			from numpy.distutils.system_info import get_info
 			self.include_dirs.append(numpy.get_include())
 			self.include_dirs.append(os.path.join(numpy.get_include(), 'numpy'))
-			fftw_include_path = get_info('fftw3')['include_dirs'][0]
-			self.include_dirs.append(fftw_include_path)
 	return build_ext(pars)
 def Build( type=args[0] ):
 	bonsu_description = """ Bonsu is a collection of tools and algorithms primarily for
